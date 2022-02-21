@@ -30,13 +30,13 @@ pipeline {
             when { allOf { branch "dev"; changeset "infra/**" } }
             steps {
                 echo 'Provisioning....'
-                sh 'cd infra/dev'
-                sh 'terraform init'
-                sh 'terraform plan'
-                sh 'terraform apply'
-                // sh 'terraform init'
-                // copyArtifacts filter: 'infra/dev/terraform.tfstate', projectName: '${JOB_NAME}'
-                // archiveArtifacts artifacts: 'infra/dev/terraform.tfstate', onlyIfSuccessful: true
+                sh '''
+                cd infra/dev
+                terraform init
+                terraform plan
+                terraform apply
+
+
             }
         }
     }
