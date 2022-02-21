@@ -34,7 +34,7 @@ pipeline {
                 cd infra/dev
                 terraform init
                 terraform plan
-                terraform apply -input=false -auto-approve
+                terraform apply -auto-approve
                    '''
 
             }
