@@ -3,3 +3,5 @@
 .idea
 # python
 venv
+*/.terraform*
+*/terraform.tfstate*
