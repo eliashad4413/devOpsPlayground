@@ -27,7 +27,7 @@ pipeline {
             }
         }
         stage('Provisioning - Dev') {
-            when { allOf { branch "dev"; changeset "infra/**/*.tf" } }
+            when { allOf { branch "dev"; changeset "infra/**" } }
             steps {
                 echo 'Provisioning....'
                 sh 'cd infra/dev'
