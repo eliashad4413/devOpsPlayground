@@ -1,5 +1,6 @@
 pipeline {
-    agent any
+    agent { label ''}
+
     environment {
     DockerHost = '352708296901.dkr.ecr.us-east-1.amazonaws.com'
     Image = 'eliasrepo:${BRANCH_NAME}_{BUILD_NUMBER}'
